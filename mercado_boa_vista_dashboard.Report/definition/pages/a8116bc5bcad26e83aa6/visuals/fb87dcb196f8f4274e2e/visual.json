@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "fb87dcb196f8f4274e2e",
   "position": {
-    "x": 794.84117506567952,
-    "y": 359.51277764509194,
+    "x": 793.61834248865534,
+    "y": 342.39312156675425,
     "z": 15000,
     "height": 244.56651540482446,
     "width": 485.46453307857655,
@@ -105,6 +105,13 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"

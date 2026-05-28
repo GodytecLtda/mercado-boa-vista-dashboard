@@ -6,7 +6,7 @@
     "y": 640.76427036064013,
     "z": 12000,
     "height": 63.587294005254357,
-    "width": 245.78934798184858,
+    "width": 292.25698590876522,
     "tabOrder": 11000
   },
   "visual": {
@@ -42,7 +42,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Investigar a queda após janeiro e reforçar campanhas nos produtos de maior saída.'"
+                  "Value": "'A análise indica queda após janeiro; recomenda-se reforçar campanhas nos produtos de maior saída.'"
                 }
               }
             },

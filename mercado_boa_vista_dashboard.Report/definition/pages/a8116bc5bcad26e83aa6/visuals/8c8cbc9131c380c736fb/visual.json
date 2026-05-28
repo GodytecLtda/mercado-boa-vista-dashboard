@@ -21,6 +21,13 @@
                   "Value": "'rectangle'"
                 }
               }
+            },
+            "roundEdge": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
             }
           }
         }
