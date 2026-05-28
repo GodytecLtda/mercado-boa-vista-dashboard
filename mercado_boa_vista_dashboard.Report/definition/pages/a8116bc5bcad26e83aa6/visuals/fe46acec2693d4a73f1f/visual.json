@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "fe46acec2693d4a73f1f",
+  "position": {
+    "x": 25.679484117506568,
+    "y": 475.68187246238358,
+    "z": 7000,
+    "height": 244.56651540482446,
+    "width": 305.70814425603061,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_sales_detail"
+                    }
+                  },
+                  "Property": "payment_method"
+                }
+              },
+              "queryRef": "vw_sales_detail.payment_method",
+              "nativeQueryRef": "payment_method",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "vw_sales_detail"
+                        }
+                      },
+                      "Property": "sale_id"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "CountNonNull(vw_sales_detail.sale_id)",
+              "nativeQueryRef": "Contagem de sale_id1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "vw_sales_detail"
+                      }
+                    },
+                    "Property": "sale_id"
+                  }
+                },
+                "Function": 2
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Formas de Pagamento'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

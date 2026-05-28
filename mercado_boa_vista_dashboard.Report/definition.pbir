@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../mercado_boa_vista_dashboard.SemanticModel"
+    }
+  }
+}
