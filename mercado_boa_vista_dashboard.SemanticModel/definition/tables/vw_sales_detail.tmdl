@@ -151,6 +151,41 @@ table vw_sales_detail
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'Mês Ano' = FORMAT('vw_sales_detail'[sale_date], "mmm/yy")
+		lineageTag: 139b1af2-63d9-465e-8235-055f3bfd959c
+		summarizeBy: none
+		sortByColumn: 'Mês Ano Data'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Mês' = YEAR('vw_sales_detail'[sale_date]) * 100 + MONTH('vw_sales_detail'[sale_date])
+		formatString: 0
+		lineageTag: 737397ff-dafb-4e49-b0b2-cce1f88e87e2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Ano Data' =
+			DATE(
+			    YEAR('vw_sales_detail'[sale_date]),
+			    MONTH('vw_sales_detail'[sale_date]),
+			    1
+			)
+		formatString: General Date
+		lineageTag: 54870469-5b3c-4b9f-9882-40198b7f9e5f
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 3ec12627-4b9c-4faf-acec-2bea7f059727
+			defaultHierarchy: LocalDateTable_37ecc81d-12e1-471a-bd5c-0a1935e5f663.'Hierarquia de datas'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition vw_sales_detail = m
 		mode: import
 		source =

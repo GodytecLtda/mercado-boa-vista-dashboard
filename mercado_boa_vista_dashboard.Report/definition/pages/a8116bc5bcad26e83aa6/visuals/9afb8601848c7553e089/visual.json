@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "9afb8601848c7553e089",
   "position": {
-    "x": 30.570814425603057,
-    "y": 216.44136613326964,
-    "z": 3000,
+    "x": 119.83759254836399,
+    "y": 321.60496775734418,
+    "z": 4000,
     "height": 251.90351086696919,
     "width": 245.78934798184858,
     "tabOrder": 3000
@@ -23,26 +23,11 @@
                       "Entity": "vw_sales_detail"
                     }
                   },
-                  "Property": "sale_month"
+                  "Property": "Mês Ano Data"
                 }
               },
-              "queryRef": "vw_sales_detail.sale_month",
-              "nativeQueryRef": "sale_month",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "vw_sales_detail"
-                    }
-                  },
-                  "Property": "sale_month"
-                }
-              },
-              "queryRef": "vw_sales_detail.sale_month",
-              "nativeQueryRef": "sale_month",
+              "queryRef": "vw_sales_detail.Mês Ano Data",
+              "nativeQueryRef": "Mês Ano Data",
               "active": true
             }
           ]
@@ -81,20 +66,7 @@
                     "Entity": "vw_sales_detail"
                   }
                 },
-                "Property": "sale_month"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "vw_sales_detail"
-                  }
-                },
-                "Property": "sale_month"
+                "Property": "Mês Ano Data"
               }
             },
             "direction": "Ascending"
@@ -129,6 +101,23 @@
             }
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F3A35'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -138,7 +127,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Faturamento do Mês'"
+                  "Value": "'Faturamento mensal'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

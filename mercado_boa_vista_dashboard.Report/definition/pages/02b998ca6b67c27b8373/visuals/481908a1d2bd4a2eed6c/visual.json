@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "fe46acec2693d4a73f1f",
+  "name": "481908a1d2bd4a2eed6c",
   "position": {
-    "x": 25.679484117506568,
-    "y": 475.68187246238358,
-    "z": 7000,
-    "height": 244.56651540482446,
-    "width": 305.70814425603061,
-    "tabOrder": 7000
+    "x": 189.29446799617881,
+    "y": 397.66509433962278,
+    "z": 2000,
+    "height": 233.56102221160737,
+    "width": 283.69715786959637,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "vw_sales_detail"
                     }
                   },
-                  "Property": "payment_method"
+                  "Property": "city"
                 }
               },
-              "queryRef": "vw_sales_detail.payment_method",
-              "nativeQueryRef": "payment_method",
+              "queryRef": "vw_sales_detail.city",
+              "nativeQueryRef": "city",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "vw_sales_detail"
                         }
                       },
-                      "Property": "sale_id"
+                      "Property": "customer_id"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(vw_sales_detail.sale_id)",
-              "nativeQueryRef": "Contagem de sale_id1"
+              "queryRef": "CountNonNull(vw_sales_detail.customer_id)",
+              "nativeQueryRef": "Contagem de customer_id1"
             }
           ]
         }
@@ -68,7 +68,7 @@
                         "Entity": "vw_sales_detail"
                       }
                     },
-                    "Property": "sale_id"
+                    "Property": "customer_id"
                   }
                 },
                 "Function": 2
@@ -80,6 +80,34 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -87,7 +115,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Formas de Pagamento'"
+                  "Value": "'Clientes por Cidade'"
                 }
               }
             }
