@@ -143,12 +143,14 @@ table vw_sales_detail
 
 	column line_total
 		dataType: double
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 7db6f68a-62d0-4f7b-ba9d-581ebf4a746b
 		summarizeBy: sum
 		sourceColumn: line_total
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column 'Mês Ano' = FORMAT('vw_sales_detail'[sale_date], "mmm/yy")
 		lineageTag: 139b1af2-63d9-465e-8235-055f3bfd959c
