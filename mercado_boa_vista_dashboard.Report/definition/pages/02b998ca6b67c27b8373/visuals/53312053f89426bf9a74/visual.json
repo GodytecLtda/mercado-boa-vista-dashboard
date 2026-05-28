@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "99866466b25833604035",
+  "name": "53312053f89426bf9a74",
   "position": {
-    "x": 335.05612610460952,
-    "y": 480.57320277048007,
-    "z": 8000,
-    "height": 233.56102221160737,
-    "width": 283.69715786959637,
-    "tabOrder": 8000
+    "x": 974.59756388822552,
+    "y": 127.17458801050871,
+    "z": 4000,
+    "height": 244.56651540482446,
+    "width": 305.70814425603061,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "vw_sales_detail"
                     }
                   },
-                  "Property": "city"
+                  "Property": "payment_method"
                 }
               },
-              "queryRef": "vw_sales_detail.city",
-              "nativeQueryRef": "city",
+              "queryRef": "vw_sales_detail.payment_method",
+              "nativeQueryRef": "payment_method",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "vw_sales_detail"
                         }
                       },
-                      "Property": "customer_id"
+                      "Property": "sale_id"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(vw_sales_detail.customer_id)",
-              "nativeQueryRef": "Contagem de customer_id1"
+              "queryRef": "CountNonNull(vw_sales_detail.sale_id)",
+              "nativeQueryRef": "Contagem de sale_id1"
             }
           ]
         }
@@ -68,7 +68,7 @@
                         "Entity": "vw_sales_detail"
                       }
                     },
-                    "Property": "customer_id"
+                    "Property": "sale_id"
                   }
                 },
                 "Function": 2
@@ -81,26 +81,38 @@
       }
     },
     "objects": {
-      "categoryAxis": [
+      "dataPoint": [
         {
           "properties": {
-            "showAxisTitle": {
+            "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F3A35'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderOutlineOnly": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -115,7 +127,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Clientes por Cidade'"
+                  "Value": "'Formas de Pagamento'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }

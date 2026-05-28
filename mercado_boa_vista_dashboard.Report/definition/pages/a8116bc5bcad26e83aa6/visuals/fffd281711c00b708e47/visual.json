@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "fffd281711c00b708e47",
   "position": {
-    "x": 335.05612610460952,
-    "y": 216.44136613326964,
-    "z": 4000,
+    "x": 497.69285884881776,
+    "y": 342.39312156675425,
+    "z": 5000,
     "height": 254.34917602101743,
     "width": 283.69715786959637,
     "tabOrder": 4000
@@ -103,6 +103,30 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F3A35'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -115,11 +139,25 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Faturamento por Categoria'"
+                  "Value": "'Categorias que mais geram receita'"
                 }
               }
             },
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -131,5 +169,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5dcf8348e1d85eac6037",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "vw_sales_detail"
+              }
+            },
+            "Property": "category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e0e0e6460bd2fb5a43ae",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "vw_sales_detail"
+                  }
+                },
+                "Property": "line_total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "a15d9e6a4779749975aa",
+  "name": "fb87dcb196f8f4274e2e",
   "position": {
-    "x": 933.02125626940528,
-    "y": 232.33818963458324,
-    "z": 6000,
-    "height": 258.01767375208982,
-    "width": 310.59947456412709,
-    "tabOrder": 6000
+    "x": 793.61834248865534,
+    "y": 342.39312156675425,
+    "z": 15000,
+    "height": 244.56651540482446,
+    "width": 485.46453307857655,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "barChart",
@@ -23,11 +23,11 @@
                       "Entity": "vw_sales_detail"
                     }
                   },
-                  "Property": "seller_name"
+                  "Property": "product_name"
                 }
               },
-              "queryRef": "vw_sales_detail.seller_name",
-              "nativeQueryRef": "seller_name",
+              "queryRef": "vw_sales_detail.product_name",
+              "nativeQueryRef": "product_name",
               "active": true
             }
           ]
@@ -81,6 +81,26 @@
       }
     },
     "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "valueAxis": [
         {
           "properties": {
@@ -90,17 +110,28 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
       ],
-      "categoryAxis": [
+      "dataPoint": [
         {
           "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F3A35'"
+                    }
+                  }
                 }
               }
             }
@@ -115,7 +146,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 5 Vendedores por Faturamento'"
+                  "Value": "'Produtos líderes em faturamento'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -128,7 +173,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "27f94305ae594bbde918",
+        "name": "013a3cc229997725783f",
         "field": {
           "Column": {
             "Expression": {
@@ -136,7 +181,7 @@
                 "Entity": "vw_sales_detail"
               }
             },
-            "Property": "seller_name"
+            "Property": "product_name"
           }
         },
         "type": "TopN",
@@ -164,7 +209,7 @@
                               "Source": "v"
                             }
                           },
-                          "Property": "seller_name"
+                          "Property": "product_name"
                         },
                         "Name": "field"
                       }
@@ -213,7 +258,7 @@
                             "Source": "v"
                           }
                         },
-                        "Property": "seller_name"
+                        "Property": "product_name"
                       }
                     }
                   ],
